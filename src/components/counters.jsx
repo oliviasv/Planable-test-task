@@ -17,6 +17,7 @@ class Counters extends Component {
           className="btn btn-success m-2"
           onClick={onReset}
           disabled={counters.length === 0 ? "disabled" : ""}
+          data-cy="reset-button"
         >
           <i className="fa fa-refresh" aria-hidden="true" />
         </button>
