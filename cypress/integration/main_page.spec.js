@@ -12,23 +12,28 @@ describe('Test Counter App main page', function() {
             cy.get('.badge-warning').should('contain', 'Zero')    
         })
 
-        cy.get('.btn-secondary').click({multiple: true})
+        let num = Math.floor(Math.random() * 10) 
+
+        for(let n = 0; n < num; n++) {
+            cy.get('.btn-secondary').click({multiple: true})
         //   .each(($div, index, $divs) => {})
-          .then(($divs) => {
-            expect($divs).to.have.length(4)         
-        }) 
+            .then(($divs) => {
+                expect($divs).to.have.length(4)        
+            })  
+        }
         
         cy.get('div > .row').each(() => {
-            cy.get('.badge-primary').should('contain', '1')
+            cy.get('.badge-primary').should('contain', num)
         })
 
-
-        cy.get('.btn-info').click({multiple: true})
-        //   .each(($div, index, $divs) => {})
-          .then(($divs) => {
-            expect($divs).to.have.length(4)
-        }) 
-      
+        for(let n = 0; n < num; n++) {
+            cy.get('.btn-info').click({multiple: true})
+            //   .each(($div, index, $divs) => {})
+              .then(($divs) => {
+                expect($divs).to.have.length(4)
+            })          
+        }
+ 
         cy.get('div > .row').each(() => {
             cy.get('.badge-warning').should('contain', 'Zero')    
         })
