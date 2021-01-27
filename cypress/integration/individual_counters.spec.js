@@ -15,10 +15,6 @@ describe('Test each individual counter', function() {
         for(let n = 0; n < num; n++) {
             cy.get('[data-cy=plus-button]')
                 .click({multiple: true})
-            //   .each(($div, index, $divs) => {})
-            // .then(($divs) => {
-            //     expect($divs).to.have.length(4)        
-            // })  
         }
         
         cy.get('[data-cy=individual-counter]')
@@ -29,11 +25,7 @@ describe('Test each individual counter', function() {
 
         for(let n = 0; n < num; n++) {
             cy.get('[data-cy=minus-button]')
-                .click({multiple: true})
-            //   .each(($div, index, $divs) => {})
-            //   .then(($divs) => {
-            //     expect($divs).to.have.length(4)
-            // })          
+                .click({multiple: true})         
         }
  
         cy.get('[data-cy=individual-counter]')
