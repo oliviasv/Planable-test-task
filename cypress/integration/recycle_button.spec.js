@@ -4,10 +4,8 @@ describe('Test Recycle Button', function() {
     })
 
     it('view all items again when when they a all deleted', function() {
-        cy.get('[data-cy=delete-button]')
-            .each(($el) => {
-                cy.get($el).click({multiple: true})
-        })
+        
+        cy.get('[data-cy=delete-button]').click({multiple: true})
 
         cy.get('[data-cy=recycle-button]').click()
         
