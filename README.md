@@ -36,5 +36,5 @@
 ##### Test Case for Recycle Button
 1.  Select all ``delete-buttons`` and click on each of them
 2.  Select and click the ``recycle-button``
-3.  Select all ``individual-cpunters`` and verify if they are visible again
+3.  Select all ``individual-counters`` and verify if they are visible again
 4.  Select all  ``badge-value`` and verify that they contain the 'Zero' value 
