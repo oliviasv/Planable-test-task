@@ -3,9 +3,11 @@ describe('Test Recycle Button', function() {
         cy.visit('/')
     })
 
-    it('view all items again when when they a all deleted', function() {
+    it('delete all items then click recycle to view all items again', function() {
         
         cy.get('[data-cy=delete-button]').click({multiple: true})
+
+        // cy.get('[data-cy=individual-counter]').should('not.be.visible')
 
         cy.get('[data-cy=recycle-button]').click()
         
