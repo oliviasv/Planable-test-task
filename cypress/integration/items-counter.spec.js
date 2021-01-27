@@ -20,6 +20,17 @@ describe('Items Counter should be able to update', function() {
         cy.get('[data-cy=items-counter]')
             .should('contain', '0')
 
-    })
+        cy.get('[data-cy=plus-button]')
+            .each(($el) => {
+                cy.get($el).dblclick({multiple: true})
+        })
 
+        cy.get('[data-cy=items-counter]')
+            .should('contain', '4')
+
+        cy.get('[data-cy=reset-button]').click()
+
+        cy.get('[data-cy=items-counter]')
+            .should('contain', '0')
+    })
 })
