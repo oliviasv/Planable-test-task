@@ -33,6 +33,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "cypress": "^6.3.0"
+    "cypress": "^7.4.0"
   }
 }
