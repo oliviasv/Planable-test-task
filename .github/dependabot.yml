@@ -18,5 +18,5 @@ updates:
 
     ignore: 
       - dependency-name: "*"
-        updates-types: ["version-update:semver-major"]
+        update-types: ["version-update:semver-major"]
 
