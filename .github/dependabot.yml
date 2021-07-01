@@ -13,10 +13,10 @@ updates:
       prefix: "⬆️ "
 
     allow: 
-      dependency-name: "*"
-      dependency-type: "production"
+      - dependency-name: "*"
+        dependency-type: "production"
 
     ignore: 
-      dependency-name: "*"
-      dependency-type: ["version-update:semver-major"]
+      - dependency-name: "*"
+        dependency-type: ["version-update:semver-major"]
 
